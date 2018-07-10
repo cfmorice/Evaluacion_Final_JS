@@ -1,5 +1,6 @@
 Calculadora = function () {
 
+//Se definen las variables que son accesadas por las diferentes funciones
 var num1 = "";
 var num2 = "";
 var acumulado = 0;
@@ -26,6 +27,9 @@ var cero = document.getElementById("0");
 var punto = document.getElementById("punto");
 var igual = document.getElementById("igual");
 
+//Se define dos funciones para validar el máximo de 8 dígitos
+
+//La primera función valida que no se muestren más de 8 dígitos cuando el usuario digita números en la calculadora
 function limiteDigitos() {
   if (pantalla.innerText.length >= 8) {
     displayMax = pantalla.innerText;
@@ -33,6 +37,7 @@ function limiteDigitos() {
   }
 };
 
+//La segunda función utiliza el método toPrecision para limitar la cantidad de dígitos cuando la calculadora realiza operaciones
 function resultadoMax() {
   if (pantalla.innerText.length >= 8) {
     displayMax = parseFloat(pantalla.innerText);
@@ -43,6 +48,11 @@ function resultadoMax() {
 function borrarPantalla() {
   pantalla.innerText = "";
 };
+
+//Se definen 3 funciones básicas para cada tecla:
+//1- La función que permite accionar la tecla (sumar, restar, igual, digitar número, etc.)
+//2- La función que al presionar la tecla reduce su imagen
+//3- La función que devuelve la imagen a su tamaño original
 
 onC.onclick = function () {
   pantalla.innerText = "0";
@@ -253,6 +263,8 @@ signo.onmouseup = function () {
   signo.style.transform = "scale(1, 1)";
 };
 
+//Se definen las funciones suma, resta, multiplicación y división
+
 suma.onclick = function () {
   if (operacionActual != "suma") {
     acumulado = parseFloat(pantalla.innerText);
@@ -336,6 +348,7 @@ dividir.onmouseup = function () {
   dividir.style.transform = "scale(1, 1)";
 };
 
+//Se define una función especial para operar el igual que permite concatenar operaciones
 igual.onclick = function () {
   switch (operacionActual) {
 
