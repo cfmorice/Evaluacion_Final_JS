@@ -289,13 +289,12 @@ suma.onmouseup = function () {
 resta.onclick = function () {
   if (operacionActual != "resta") {
     acumulado = parseFloat(pantalla.innerText);
-    pantalla.innerText = "";
   } else {
     num1 = parseFloat(pantalla.innerText);
     num1 = -(num1);
     acumulado += num1;
-    pantalla.innerText = "";
   }
+  pantalla.innerText = "";
   operacionActual = "resta";
   limiteDigitos();
 };
@@ -309,11 +308,11 @@ resta.onmouseup = function () {
 };
 
 multiplicar.onclick = function () {
-  if (operacionActual == "multiplicar" && acumulado != 0) {
+  if (operacionActual != "multiplicar") {
+    acumulado = parseFloat(pantalla.innerText);
+  } else {
     num1 = parseFloat(pantalla.innerText);
     acumulado *= num1;
-  } else {
-    acumulado = parseFloat(pantalla.innerText);
   }
   operacionActual = "multiplicar";
   pantalla.innerText = "";
@@ -329,11 +328,12 @@ multiplicar.onmouseup = function () {
 };
 
 dividir.onclick = function () {
-  if (operacionActual == "dividir" && acumulado != 0) {
+  if (operacionActual != "dividir") {
+    acumulado = parseFloat(pantalla.innerText);
+
+  } else {
     num1 = parseFloat(pantalla.innerText);
     acumulado /= num1;
-  } else {
-    acumulado = parseFloat(pantalla.innerText);
   }
   operacionActual = "dividir";
   pantalla.innerText = "";
