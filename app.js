@@ -62,7 +62,7 @@ onC.onclick = function () {
 };
 
 onC.onmousedown = function () {
-  onC.style.transform = "scale(0.8, 0.8)";
+  onC.style.transform = "scale(0.9, 0.9)";
 }
 
 onC.onmouseup = function () {
@@ -78,7 +78,7 @@ uno.onclick = function () {
 };
 
 uno.onmousedown = function () {
-  uno.style.transform = "scale(0.8, 0.8)";
+  uno.style.transform = "scale(0.9, 0.9)";
 };
 
 uno.onmouseup = function () {
@@ -94,7 +94,7 @@ dos.onclick = function () {
 };
 
 dos.onmousedown = function () {
-  dos.style.transform = "scale(0.8, 0.8)";
+  dos.style.transform = "scale(0.9, 0.9)";
 };
 
 dos.onmouseup = function () {
@@ -110,7 +110,7 @@ tres.onclick = function () {
 };
 
 tres.onmousedown = function () {
-  tres.style.transform = "scale(0.8, 0.8)";
+  tres.style.transform = "scale(0.9, 0.9)";
 };
 
 tres.onmouseup = function () {
@@ -126,7 +126,7 @@ cuatro.onclick = function () {
 };
 
 cuatro.onmousedown = function () {
-  cuatro.style.transform = "scale(0.8, 0.8)";
+  cuatro.style.transform = "scale(0.9, 0.9)";
 };
 
 cuatro.onmouseup = function () {
@@ -142,7 +142,7 @@ cinco.onclick = function () {
 };
 
 cinco.onmousedown = function () {
-  cinco.style.transform = "scale(0.8, 0.8)";
+  cinco.style.transform = "scale(0.9, 0.9)";
 };
 
 cinco.onmouseup = function () {
@@ -158,7 +158,7 @@ seis.onclick = function () {
 };
 
 seis.onmousedown = function () {
-  seis.style.transform = "scale(0.8, 0.8)";
+  seis.style.transform = "scale(0.9, 0.9)";
 };
 
 seis.onmouseup = function () {
@@ -174,7 +174,7 @@ siete.onclick = function () {
 };
 
 siete.onmousedown = function () {
-  siete.style.transform = "scale(0.8, 0.8)";
+  siete.style.transform = "scale(0.9, 0.9)";
 };
 
 siete.onmouseup = function () {
@@ -190,7 +190,7 @@ ocho.onclick = function () {
 };
 
 ocho.onmousedown = function () {
-  ocho.style.transform = "scale(0.8, 0.8)";
+  ocho.style.transform = "scale(0.9, 0.9)";
 };
 
 ocho.onmouseup = function () {
@@ -206,7 +206,7 @@ nueve.onclick = function () {
 };
 
 nueve.onmousedown = function () {
-  nueve.style.transform = "scale(0.8, 0.8)";
+  nueve.style.transform = "scale(0.9, 0.9)";
 };
 
 nueve.onmouseup = function () {
@@ -222,7 +222,7 @@ cero.onclick = function () {
 };
 
 cero.onmousedown = function () {
-  cero.style.transform = "scale(0.8, 0.8)";
+  cero.style.transform = "scale(0.9, 0.9)";
 };
 
 cero.onmouseup = function () {
@@ -238,7 +238,7 @@ punto.onclick = function () {
 };
 
 punto.onmousedown = function () {
-  punto.style.transform = "scale(0.8, 0.8)";
+  punto.style.transform = "scale(0.9, 0.9)";
 };
 
 punto.onmouseup = function () {
@@ -256,7 +256,7 @@ signo.onclick = function () {
 };
 
 signo.onmousedown = function () {
-  signo.style.transform = "scale(0.8, 0.8)";
+  signo.style.transform = "scale(0.9, 0.9)";
 };
 
 signo.onmouseup = function () {
@@ -279,7 +279,7 @@ suma.onclick = function () {
 };
 
 suma.onmousedown = function () {
-  suma.style.transform = "scale(0.8, 0.8)";
+  suma.style.transform = "scale(0.9, 0.9)";
 };
 
 suma.onmouseup = function () {
@@ -301,7 +301,7 @@ resta.onclick = function () {
 };
 
 resta.onmousedown = function () {
-  resta.style.transform = "scale(0.8, 0.8)";
+  resta.style.transform = "scale(0.9, 0.9)";
 };
 
 resta.onmouseup = function () {
@@ -309,11 +309,11 @@ resta.onmouseup = function () {
 };
 
 multiplicar.onclick = function () {
-  num1 = parseFloat(pantalla.innerText);
   if (operacionActual == "multiplicar" && acumulado != 0) {
+    num1 = parseFloat(pantalla.innerText);
     acumulado *= num1;
   } else {
-    acumulado = num1;
+    acumulado = parseFloat(pantalla.innerText);
   }
   operacionActual = "multiplicar";
   pantalla.innerText = "";
@@ -321,7 +321,7 @@ multiplicar.onclick = function () {
 };
 
 multiplicar.onmousedown = function () {
-  multiplicar.style.transform = "scale(0.8, 0.8)";
+  multiplicar.style.transform = "scale(0.9, 0.9)";
 };
 
 multiplicar.onmouseup = function () {
@@ -329,11 +329,11 @@ multiplicar.onmouseup = function () {
 };
 
 dividir.onclick = function () {
-  num1 = parseFloat(pantalla.innerText);
   if (operacionActual == "dividir" && acumulado != 0) {
+    num1 = parseFloat(pantalla.innerText);
     acumulado /= num1;
   } else {
-    acumulado = num1;
+    acumulado = parseFloat(pantalla.innerText);
   }
   operacionActual = "dividir";
   pantalla.innerText = "";
@@ -341,7 +341,7 @@ dividir.onclick = function () {
 };
 
 dividir.onmousedown = function () {
-  dividir.style.transform = "scale(0.8, 0.8)";
+  dividir.style.transform = "scale(0.9, 0.9)";
 };
 
 dividir.onmouseup = function () {
@@ -407,7 +407,7 @@ igual.onclick = function () {
 };
 
 igual.onmousedown = function () {
-  igual.style.transform = "scale(0.8, 0.8)";
+  igual.style.transform = "scale(0.9, 0.9)";
 };
 
 igual.onmouseup = function () {
